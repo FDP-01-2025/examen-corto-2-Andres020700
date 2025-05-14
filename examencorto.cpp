@@ -5,7 +5,7 @@ int main()
     int edad, opcion, saldo = 1000, estudiante, profesional;
     float laptop, tablet, cromebook, resto, sobrante, estacionTrabajo, laptopAvanzada, tabletPro;
 
-    cout << "Digita tu edad por favor" << endl;
+    cout << "Digita tu edad por favor" << endl; // se le pide edad
     cin >> edad;
     if (edad < 16)
     {
@@ -13,7 +13,7 @@ int main()
         return 0;
     }
     else
-    {
+    { // menu principal
         cout << "----Seleccione que tipo de usuario es ----" << endl;
         cout << "1. Estudiante " << endl;
         cout << "2. Profesional" << endl;
@@ -22,7 +22,7 @@ int main()
 
         switch (opcion)
         {
-        case 1:
+        case 1: // ocpiones de estudiante
             cout << "Como estudiante tienes los siguientes productos" << endl;
             cout << "1. Laptop basica   $900 " << endl;
             cout << "2. Tablet estudiantil          $600 " << endl;
@@ -31,10 +31,10 @@ int main()
 
             switch (estudiante)
             {
-            case 1:
+            case 1://caso laptop basica
                 cout << "Por ser estudiante tienes un descuento del 20%" << endl;
                 laptop = 900 - 180;
-                cout << "El precio final de la laptop es de " << laptop << endl;
+                cout << "El precio final de la laptop basica es de " << laptop << endl;
                 if (saldo > laptop)
                 {
                     sobrante = saldo - laptop;
@@ -47,7 +47,7 @@ int main()
                 }
                 break;
 
-            case 2:
+            case 2://caso tablet estudiantil
                 cout << "Por ser estudiante tienes un descuento del 20%" << endl;
                 tablet = 600 - 120;
                 cout << "El precio final de la tablet estudiantil es de " << tablet << endl;
@@ -63,7 +63,7 @@ int main()
                 }
                 break;
 
-            case 3:
+            case 3://caso chromebook
                 cout << "Por ser estudiante tienes un descuento del 20%" << endl;
                 cromebook = 700 - 140;
                 cout << "El precio final del chromebook es de " << cromebook << endl;
@@ -82,7 +82,7 @@ int main()
                 cout << "Digite una opcion valida por favor" << endl;
             }
             return 0;
-        case 2:
+        case 2: // opciones para el profesional
             cout << "Como profesional tienes los siguientes productos" << endl;
             cout << "1. Laptop avanzada       $1500 " << endl;
             cout << "2. Tablet Pro            $1200 " << endl;
@@ -91,7 +91,7 @@ int main()
 
             switch (profesional)
             {
-            case 1:
+            case 1://caso laptop avanzada
                 cout << "Por ser profesional tienes un descuento del 10%" << endl;
                 laptopAvanzada = 1500 - 150;
                 cout << "El precio final de la laptop avanzada es de " << laptopAvanzada << endl;
@@ -107,7 +107,7 @@ int main()
                 }
                 break;
 
-            case 2:
+            case 2://caso tablet pro
                 cout << "Por ser profesional tienes un descuento del 10%" << endl;
                 tabletPro = 1200 - 120;
                 cout << "El precio final de la tablet pro es de " << tabletPro << endl;
@@ -123,7 +123,7 @@ int main()
                 }
                 break;
 
-            case 3:
+            case 3://caso estacion de trabajo
                 cout << "Por ser profesional tienes un descuento del 10%" << endl;
                 estacionTrabajo = 2000 - 200;
                 cout << "El precio final de la estacion de trabajo es de " << estacionTrabajo << endl;
@@ -143,19 +143,20 @@ int main()
             }
             return 0;
 
-        case 3:
+        case 3: // ambas opciones para el usuario
             cout << "Como estudiante tienes los siguientes productos" << endl;
-            cout << "1. Laptop basica   $900 " << endl;
-            cout << "2. Tablet          $600 " << endl;
-            cout << "3. Chromebook      $700 " << endl;
+            cout << "1. Laptop basica     $900 " << endl;
+            cout << "2. Tablet            $600 " << endl;
+            cout << "3. Chromebook        $700 " << endl;
             cout << endl;
             cout << "Como profesional tienes los siguientes productos" << endl;
             cout << "1. Laptop avanzada   $1500 " << endl;
             cout << "2. Tablet            $1200 " << endl;
             cout << "3. Chromebook        $2000 " << endl;
             break;
-        default:
+        default://si ninguna opcion es
             cout << "Digite una opcion valida por favor" << endl;
         }
     }
+return 0;
 }
